@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#070d1d">
+  <title>Lampkeeper's Tide</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #070d1d; color: #fff1d5; font-family: Georgia, 'Times New Roman', serif; }
+    body { display: grid; place-items: center; }
+    #frame { position: relative; width: min(100vw, 177.7778vh); height: min(100vh, 56.25vw); aspect-ratio: 16/9; overflow: hidden; background: #070d1d; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    #hint { position: absolute; right: 18px; bottom: 12px; color: rgba(255,241,213,.46); font: 11px system-ui, sans-serif; pointer-events: none; }
+    @media (max-width: 600px) { #hint { display:none; } }
+  </style>
+</head>
+<body>
+  <main id="frame" aria-label="Lampkeeper's Tide lighthouse game">
+    <canvas id="game" width="1280" height="720" aria-label="Guide ships through the night"></canvas>
+    <div id="hint">MOVE TO AIM · HOLD TO FOCUS · H HORN · P PAUSE · M MUTE</div>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
